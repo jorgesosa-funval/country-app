@@ -1,7 +1,10 @@
-import React from 'react'
+import { QuizCompleted } from "./components/QuizCompleted"
 
 export default function App() {
   return (
-    <div className='bg-slate-800 text-4xl'>App</div>
-  )
+    <>
+     <QuizCompleted />
+
+      </>
+      )
 }
