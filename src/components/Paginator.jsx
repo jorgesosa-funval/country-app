@@ -1,23 +1,16 @@
 import React, { useState } from 'react';
 
-export function Paginator() {
-  
+export function Paginator({ counter }) {
+
   const [selectedButton, setSelectedButton] = useState(null);
 
-  const handleClick = (index) => {
-    setSelectedButton(index); 
-  };
 
   return (
     <div className="flex flex-wrap justify-center gap-3 md:mt-24 max-sm:mt-6 font-bold">
       {[...Array(10)].map((_, index) => (
         <div
           key={index}
-          onClick={() => handleClick(index)} 
-          className={`border-0 rounded-full size-10 grid place-content-center  text-white transition-all duration-200 ${
-            selectedButton === index ? 'bg-gradient-to-r from-[#E65895] to-[#BC6BE8]'
-              : 'bg-[#343964]' 
-          }`}
+          className={`border-0 rounded-full size-10 grid place-content-center  text-white transition-all duration-200 ${index >= (counter +1) ? 'bg-[#343964]': 'bg-gradient-to-r from-[#E65895] to-[#BC6BE8]'}`}
         >
           {index + 1}
         </div>
