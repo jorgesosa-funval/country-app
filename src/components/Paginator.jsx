@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 export default function Paginator() {
   
-  const [selectedButton, setSelectedButton] = useState(0, 10);
+  const [selectedButton, setSelectedButton] = useState(null);
 
   const handleClick = (index) => {
     setSelectedButton(index); 
   };
 
   return (
-    <div className="flex flex-wrap justify-center gap-2 md:mt-24 max-sm:mt-12">
+    <div className="flex flex-wrap justify-center gap-3 md:mt-24 max-sm:mt-6">
       {[...Array(10)].map((_, index) => (
         <div
           key={index}
