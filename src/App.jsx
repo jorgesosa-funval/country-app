@@ -1,43 +1,20 @@
-
-import React from 'react'
-import Botones from './components/Botones'
-
-import { Container } from "./components/Container";
-import Titulo from './components/Titulo'
+import { Container } from './components/Container'
 import Input from './components/Input'
-import { QuizCompleted } from "./components/QuizCompleted"
-import Paginator from './components/paginator'
+import Titulo from './components/Titulo'
 import useQuiz from './hooks/ useQuiz'
 
 
 export default function App() {
-  const { questions} = useQuiz()
- 
+  const { questions } = useQuiz()
+
   return (
-   <>
-    <div>
-    <div className='bg-slate-800 text-4xl'>App  
+    <div className='w-full h-screen flex flex-col items-center justify-center relative bg-[url("icons/bg-sm.jpg")]  md:bg-[url("icons/bg.jpg")] md:bg-cover'>
+      <header className='flex justify-between items-center w-full px-8 py-4'>
+        <Titulo/>
+        <Input/>
+      </header>
+      <Container />
     </div>
-    <Botones/>
-    </div>
-                                
- 
-    <div className='flex flex-col items-center justify-center'>
-      <h1 className='pt-44 pb-5'>Country Quiz</h1>
-      <Container></Container>
-    </div>
-
-    
-    <header className='flex bg-sky-950 justify-between items-center p-4'>
-      <Titulo />
-      <Input />
-    </header>
-
-     <QuizCompleted />
-
-    <div className='bg-slate-800 text-4xl'>App</div>
-    <Paginator/>
-    </>
 
   )
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Paginator() {
+export function Paginator() {
   
   const [selectedButton, setSelectedButton] = useState(null);
 
@@ -9,7 +9,7 @@ export default function Paginator() {
   };
 
   return (
-    <div className="flex flex-wrap justify-center gap-3 md:mt-24 max-sm:mt-6">
+    <div className="flex flex-wrap justify-center gap-3 md:mt-24 max-sm:mt-6 font-bold">
       {[...Array(10)].map((_, index) => (
         <div
           key={index}
