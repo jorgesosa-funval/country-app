@@ -1,44 +1,33 @@
 import { useState, useEffect } from "react";
 
-const country = "/public/countries.json";
+const country = "/src/assets/countries.json";
 
 export default function useCustomHooks() {
-
-    const [data, setData] = useState([])
-    data.map(res => {
-        const rs = res.continents.filter((word) => word === 'North America')
-        
-    })
-
-    useEffect(() => {
-      fetch(country)
-        .then((res) => res.json())
-        .then((data) => setData(data));
-    }, [])
-    
-
-  return <div>custom-hooks</div>;
+  const [data, setData] = useState([]);
+  data.splice(0, 10).map((res) => {
+        questionWords(res)
+   });
+  useEffect(() => {
+    fetch(country)
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
+  function questionWords(res){
+    if (res.name.common === 'Caribbean Netherlands') {
+        console.log(res);
+      }
 }
-/* export async function fetchData(country) {
-    const response = await fetch(country)
-    const data = await response.json()
-    return data
-} */
-//import React, { useEffect, useState } from 'react'
-// import { fetchData } from '../App';
-// export function useData(url) {
+  return { data };
+}
+//cual es la capital de "caribe" ?
+//¿Qué idioma(s) oficial(es) se habla(n) en [nombre del país]?
+//¿Qué moneda se utiliza en [nombre del país]?
+//¿Cuál es la población aproximada de [nombre del país]?
+//¿En qué región se encuentra Australia?
+//¿Qué superficie tiene Rusia?
+//¿Cuál es el dominio de internet de España?
+//¿Puedes identificar la bandera de Italia?
+//¿En qué continentes hay países que hablan español?
+//¿En qué continente se encuentra Egipto?
 
-//     const [data, setData] = useState({});
-//     useEffect(() => {
-//         fetchData(url)
-//             .then(data => setData(data))
-//             .catch(error => console.error(error))
-//     }, [url])
-
-//     return {
-//         data
-//     }
-// }
-
-// const url = "https://www.themealdb.com/api/json/v1/1/categories.php";
-// const { data } = useData(url)
+//sort
