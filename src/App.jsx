@@ -1,14 +1,11 @@
-import React from 'react'
-import useCustomHooks from './hooks/custom-hooks'
-/* import { useCustomHooks } from './hooks/custom-hooks' */
+
+import useQuiz from './hooks/ useQuiz'
 export default function App() {
-
-
-  useCustomHooks()
-
+  const { questions } = useQuiz()
+  console.log(questions)
   return (
     <div><h1>hola</h1></div>
   )
-    // <useCustomHooks/>
+  
   
 }
