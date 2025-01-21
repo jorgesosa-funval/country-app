@@ -1,5 +1,4 @@
-
-import React from 'react'
+import { Container } from "./components/Container";
 import Titulo from './components/Titulo'
 import Input from './components/Input'
 import { QuizCompleted } from "./components/QuizCompleted"
@@ -11,6 +10,12 @@ export default function App() {
  
   return (
     <>
+    <div className='flex flex-col items-center justify-center'>
+      <h1 className='pt-44 pb-5'>Country Quiz</h1>
+      <Container></Container>
+    </div>
+
+    
     <header className='flex bg-sky-950 justify-between items-center p-4'>
       <Titulo />
       <Input />
