@@ -2,6 +2,7 @@ import React from 'react'
 import { Paginator } from './Paginator'
 import { Botones } from './Botones'
 export function Container({ counter, questions }) {
+
   return (
     <div className='Container flex flex-col  bg-[#393F6E] rounded-lg w-96 h-[35rem]  lg:w-4/6 lg:h-[22rem] justify-between'>
       <Paginator
@@ -14,6 +15,7 @@ export function Container({ counter, questions }) {
 
       <Botones 
         options={questions?.[counter]?.options}
+        answer={questions?.[counter]?.answer}
       />
 
     </div>
