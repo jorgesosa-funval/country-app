@@ -1,0 +1,23 @@
+export function Botones() {
+    const gradient = "bg-gradient-to-r from-[#E65895] to-[#BC6BE8]"
+  return (
+    <div className="btns w-80 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-4 mx-auto font-bold mb-10">
+      <div className=" bg-[#343964] flex gap-x-2 text-sky-100 rounded-md items-end justify-center py-4">
+        <span>Sweden</span>
+        <img src="/icons/Check_round_fill.svg" alt="correct" />
+      </div>
+      <div className="bg-[#343964]  flex gap-x-2 text-sky-100 rounded-md items-end justify-center py-4">
+        <span>Sweden</span>
+        <img src="/icons/Check_round_fill.svg" alt="correct" />
+      </div>
+      <div className="bg-[#343964] flex gap-x-2 text-sky-100 rounded-md items-end justify-center py-4">
+        <span>Sweden</span>
+        <img src="/icons/Check_round_fill.svg" alt="correct" />
+      </div>
+      <div className="bg-[#343964] flex gap-x-2 text-sky-100 rounded-md items-end justify-center py-4">
+        <span>Sweden</span>
+        <img src="/icons/Check_round_fill.svg" alt="correct" />
+      </div>
+    </div>
+  );
+}
