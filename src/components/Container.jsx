@@ -1,7 +1,7 @@
 import React from 'react'
 import { Paginator } from './Paginator'
 import { Botones } from './Botones'
-export function Container({ counter, questions }) {
+export function Container({ counter, questions, selected, handleClick }) {
 
   return (
     <div className='Container flex flex-col  bg-[#393F6E] rounded-lg w-96 h-[35rem]  lg:w-4/6 lg:h-[22rem] justify-between'>
@@ -13,9 +13,11 @@ export function Container({ counter, questions }) {
         {questions?.[counter]?.question}
       </h2>
 
-      <Botones 
+      <Botones
         options={questions?.[counter]?.options}
         answer={questions?.[counter]?.answer}
+        selected={selected}
+        handleClick={handleClick}
       />
 
     </div>
